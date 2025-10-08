@@ -1,0 +1,155 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`correct > correct-01.scm 1`] = `
+"Token {
+  symbol: { label: 'quote' },
+  position: Position { lineNumber: 2, charNumber: 1 },
+  text: ''
+}
+Token {
+  symbol: { label: 'set!' },
+  position: Position { lineNumber: 2, charNumber: 11 },
+  text: ''
+}
+Token {
+  symbol: { label: 'define' },
+  position: Position { lineNumber: 2, charNumber: 21 },
+  text: ''
+}
+Token {
+  symbol: { label: 'if' },
+  position: Position { lineNumber: 2, charNumber: 31 },
+  text: ''
+}
+Token {
+  symbol: { label: 'lambda' },
+  position: Position { lineNumber: 3, charNumber: 1 },
+  text: ''
+}
+Token {
+  symbol: { label: 'begin' },
+  position: Position { lineNumber: 3, charNumber: 11 },
+  text: ''
+}
+Token {
+  symbol: { label: 'cond' },
+  position: Position { lineNumber: 3, charNumber: 21 },
+  text: ''
+}
+Token {
+  symbol: { label: '+' },
+  position: Position { lineNumber: 6, charNumber: 1 },
+  text: ''
+}
+Token {
+  symbol: { label: '-' },
+  position: Position { lineNumber: 6, charNumber: 6 },
+  text: ''
+}
+Token {
+  symbol: { label: '*' },
+  position: Position { lineNumber: 6, charNumber: 11 },
+  text: ''
+}
+Token {
+  symbol: { label: '/' },
+  position: Position { lineNumber: 6, charNumber: 16 },
+  text: ''
+}
+Token {
+  symbol: { label: '<' },
+  position: Position { lineNumber: 9, charNumber: 1 },
+  text: ''
+}
+Token {
+  symbol: { label: '<=' },
+  position: Position { lineNumber: 9, charNumber: 5 },
+  text: ''
+}
+Token {
+  symbol: { label: '>' },
+  position: Position { lineNumber: 9, charNumber: 10 },
+  text: ''
+}
+Token {
+  symbol: { label: '>=' },
+  position: Position { lineNumber: 9, charNumber: 14 },
+  text: ''
+}
+Token {
+  symbol: { label: '(' },
+  position: Position { lineNumber: 12, charNumber: 1 },
+  text: ''
+}
+Token {
+  symbol: { label: ')' },
+  position: Position { lineNumber: 12, charNumber: 5 },
+  text: ''
+}
+Token {
+  symbol: { label: 'Identifier' },
+  position: Position { lineNumber: 15, charNumber: 1 },
+  text: 'x'
+}
+Token {
+  symbol: { label: 'Identifier' },
+  position: Position { lineNumber: 15, charNumber: 5 },
+  text: 'y'
+}
+Token {
+  symbol: { label: 'Identifier' },
+  position: Position { lineNumber: 15, charNumber: 9 },
+  text: 'x1'
+}
+Token {
+  symbol: { label: 'Identifier' },
+  position: Position { lineNumber: 15, charNumber: 14 },
+  text: 'i'
+}
+Token {
+  symbol: { label: 'Identifier' },
+  position: Position { lineNumber: 15, charNumber: 18 },
+  text: 'aVeryLongIdentifier'
+}
+Token {
+  symbol: { label: 'Integer Literal' },
+  position: Position { lineNumber: 18, charNumber: 1 },
+  text: '1'
+}
+Token {
+  symbol: { label: 'Integer Literal' },
+  position: Position { lineNumber: 18, charNumber: 5 },
+  text: '0'
+}
+Token {
+  symbol: { label: 'Integer Literal' },
+  position: Position { lineNumber: 18, charNumber: 9 },
+  text: '10'
+}
+Token {
+  symbol: { label: 'Integer Literal' },
+  position: Position { lineNumber: 18, charNumber: 13 },
+  text: '123456789'
+}
+Token {
+  symbol: { label: 'String Literal' },
+  position: Position { lineNumber: 19, charNumber: 1 },
+  text: '"a"'
+}
+Token {
+  symbol: { label: 'String Literal' },
+  position: Position { lineNumber: 19, charNumber: 7 },
+  text: '"a longer string"'
+}
+Token {
+  symbol: { label: 'String Literal' },
+  position: Position { lineNumber: 19, charNumber: 27 },
+  text: '"yet a longer string with a quote (\\\\) in the middle"'
+}
+Token {
+  symbol: { label: 'End-of-File' },
+  position: Position { lineNumber: 22, charNumber: 1 },
+  text: ''
+}
+"
+`;
