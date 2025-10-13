@@ -3,7 +3,7 @@ import { TokenType } from "./token-type.js";
 
 export class Token {
   /**
-   * @param {string} symbol
+   * @param {{ label: string }} symbol
    * @param {Position} position
    * @param {string} text
    */

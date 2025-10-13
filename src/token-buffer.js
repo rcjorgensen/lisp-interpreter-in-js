@@ -10,6 +10,9 @@ export class TokenBuffer {
     this.#buffer.push(new Token());
   }
 
+  /**
+   * @type {Token[]}
+   */
   #buffer = Array(this.#capacity);
   #tokenIndex = 0;
 

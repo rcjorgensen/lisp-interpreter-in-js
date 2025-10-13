@@ -34,6 +34,9 @@ export class Source {
 
   #source;
   #pos = 0;
+  /**
+   * @param {string} source
+   */
   constructor(source) {
     this.#source = source;
     this.advance();

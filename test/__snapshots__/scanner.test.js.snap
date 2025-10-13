@@ -1,155 +1,306 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`correct > correct-01.scm 1`] = `
-"Token {
-  symbol: { label: 'quote' },
-  position: Position { lineNumber: 2, charNumber: 1 },
-  text: ''
-}
-Token {
-  symbol: { label: 'set!' },
-  position: Position { lineNumber: 2, charNumber: 11 },
-  text: ''
-}
-Token {
-  symbol: { label: 'define' },
-  position: Position { lineNumber: 2, charNumber: 21 },
-  text: ''
-}
-Token {
-  symbol: { label: 'if' },
-  position: Position { lineNumber: 2, charNumber: 31 },
-  text: ''
-}
-Token {
-  symbol: { label: 'lambda' },
-  position: Position { lineNumber: 3, charNumber: 1 },
-  text: ''
-}
-Token {
-  symbol: { label: 'begin' },
-  position: Position { lineNumber: 3, charNumber: 11 },
-  text: ''
-}
-Token {
-  symbol: { label: 'cond' },
-  position: Position { lineNumber: 3, charNumber: 21 },
-  text: ''
-}
-Token {
-  symbol: { label: '+' },
-  position: Position { lineNumber: 6, charNumber: 1 },
-  text: ''
-}
-Token {
-  symbol: { label: '-' },
-  position: Position { lineNumber: 6, charNumber: 6 },
-  text: ''
-}
-Token {
-  symbol: { label: '*' },
-  position: Position { lineNumber: 6, charNumber: 11 },
-  text: ''
-}
-Token {
-  symbol: { label: '/' },
-  position: Position { lineNumber: 6, charNumber: 16 },
-  text: ''
-}
-Token {
-  symbol: { label: '<' },
-  position: Position { lineNumber: 9, charNumber: 1 },
-  text: ''
-}
-Token {
-  symbol: { label: '<=' },
-  position: Position { lineNumber: 9, charNumber: 5 },
-  text: ''
-}
-Token {
-  symbol: { label: '>' },
-  position: Position { lineNumber: 9, charNumber: 10 },
-  text: ''
-}
-Token {
-  symbol: { label: '>=' },
-  position: Position { lineNumber: 9, charNumber: 14 },
-  text: ''
-}
-Token {
-  symbol: { label: '(' },
-  position: Position { lineNumber: 12, charNumber: 1 },
-  text: ''
-}
-Token {
-  symbol: { label: ')' },
-  position: Position { lineNumber: 12, charNumber: 5 },
-  text: ''
-}
-Token {
-  symbol: { label: 'Identifier' },
-  position: Position { lineNumber: 15, charNumber: 1 },
-  text: 'x'
-}
-Token {
-  symbol: { label: 'Identifier' },
-  position: Position { lineNumber: 15, charNumber: 5 },
-  text: 'y'
-}
-Token {
-  symbol: { label: 'Identifier' },
-  position: Position { lineNumber: 15, charNumber: 9 },
-  text: 'x1'
-}
-Token {
-  symbol: { label: 'Identifier' },
-  position: Position { lineNumber: 15, charNumber: 14 },
-  text: 'i'
-}
-Token {
-  symbol: { label: 'Identifier' },
-  position: Position { lineNumber: 15, charNumber: 18 },
-  text: 'aVeryLongIdentifier'
-}
-Token {
-  symbol: { label: 'Integer Literal' },
-  position: Position { lineNumber: 18, charNumber: 1 },
-  text: '1'
-}
-Token {
-  symbol: { label: 'Integer Literal' },
-  position: Position { lineNumber: 18, charNumber: 5 },
-  text: '0'
-}
-Token {
-  symbol: { label: 'Integer Literal' },
-  position: Position { lineNumber: 18, charNumber: 9 },
-  text: '10'
-}
-Token {
-  symbol: { label: 'Integer Literal' },
-  position: Position { lineNumber: 18, charNumber: 13 },
-  text: '123456789'
-}
-Token {
-  symbol: { label: 'String Literal' },
-  position: Position { lineNumber: 19, charNumber: 1 },
-  text: '"a"'
-}
-Token {
-  symbol: { label: 'String Literal' },
-  position: Position { lineNumber: 19, charNumber: 7 },
-  text: '"a longer string"'
-}
-Token {
-  symbol: { label: 'String Literal' },
-  position: Position { lineNumber: 19, charNumber: 27 },
-  text: '"yet a longer string with a quote (\\\\) in the middle"'
-}
-Token {
-  symbol: { label: 'End-of-File' },
-  position: Position { lineNumber: 22, charNumber: 1 },
-  text: ''
-}
-"
+[
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 2,
+    },
+    "symbol": {
+      "label": "quote",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 11,
+      "lineNumber": 2,
+    },
+    "symbol": {
+      "label": "set!",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 21,
+      "lineNumber": 2,
+    },
+    "symbol": {
+      "label": "define",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 31,
+      "lineNumber": 2,
+    },
+    "symbol": {
+      "label": "if",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 3,
+    },
+    "symbol": {
+      "label": "lambda",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 11,
+      "lineNumber": 3,
+    },
+    "symbol": {
+      "label": "begin",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 21,
+      "lineNumber": 3,
+    },
+    "symbol": {
+      "label": "cond",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 6,
+    },
+    "symbol": {
+      "label": "+",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 6,
+      "lineNumber": 6,
+    },
+    "symbol": {
+      "label": "-",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 11,
+      "lineNumber": 6,
+    },
+    "symbol": {
+      "label": "*",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 16,
+      "lineNumber": 6,
+    },
+    "symbol": {
+      "label": "/",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 9,
+    },
+    "symbol": {
+      "label": "<",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 5,
+      "lineNumber": 9,
+    },
+    "symbol": {
+      "label": "<=",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 10,
+      "lineNumber": 9,
+    },
+    "symbol": {
+      "label": ">",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 14,
+      "lineNumber": 9,
+    },
+    "symbol": {
+      "label": ">=",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 12,
+    },
+    "symbol": {
+      "label": "(",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 5,
+      "lineNumber": 12,
+    },
+    "symbol": {
+      "label": ")",
+    },
+    "text": "",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 15,
+    },
+    "symbol": {
+      "label": "Identifier",
+    },
+    "text": "x",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 5,
+      "lineNumber": 15,
+    },
+    "symbol": {
+      "label": "Identifier",
+    },
+    "text": "y",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 9,
+      "lineNumber": 15,
+    },
+    "symbol": {
+      "label": "Identifier",
+    },
+    "text": "x1",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 14,
+      "lineNumber": 15,
+    },
+    "symbol": {
+      "label": "Identifier",
+    },
+    "text": "i",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 18,
+      "lineNumber": 15,
+    },
+    "symbol": {
+      "label": "Identifier",
+    },
+    "text": "aVeryLongIdentifier",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 18,
+    },
+    "symbol": {
+      "label": "Integer Literal",
+    },
+    "text": "1",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 5,
+      "lineNumber": 18,
+    },
+    "symbol": {
+      "label": "Integer Literal",
+    },
+    "text": "0",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 9,
+      "lineNumber": 18,
+    },
+    "symbol": {
+      "label": "Integer Literal",
+    },
+    "text": "10",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 13,
+      "lineNumber": 18,
+    },
+    "symbol": {
+      "label": "Integer Literal",
+    },
+    "text": "123456789",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 19,
+    },
+    "symbol": {
+      "label": "String Literal",
+    },
+    "text": ""a"",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 7,
+      "lineNumber": 19,
+    },
+    "symbol": {
+      "label": "String Literal",
+    },
+    "text": ""a longer string"",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 27,
+      "lineNumber": 19,
+    },
+    "symbol": {
+      "label": "String Literal",
+    },
+    "text": ""yet a longer string with a quote (\\) in the middle"",
+  },
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 22,
+    },
+    "symbol": {
+      "label": "End-of-File",
+    },
+    "text": "",
+  },
+]
 `;

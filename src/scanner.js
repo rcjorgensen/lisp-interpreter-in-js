@@ -151,6 +151,11 @@ export class Scanner {
           this.#source.advance();
           break;
         }
+        case "'": {
+          symbol = TokenType.apostrophe;
+          this.#source.advance();
+          break;
+        }
         case '"': {
           symbol = TokenType.stringLiteral;
           text = this.#scanStringLiteral();

@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { TokenType } from "../src/token-type.js";
 import { Source } from "../src/source.js";
 import { Scanner } from "../src/scanner.js";
+import { Parser } from "../src/parser.js";
 
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 describe("correct", async () => {
-  const correctDir = join(__dirname, "..", "examples", "scanner", "correct");
+  const correctDir = join(__dirname, "..", "examples", "parser", "correct");
   const files = (await readdir(correctDir)).filter((f) => f.endsWith(".scm"));
 
   for (const file of files) {
@@ -21,17 +21,11 @@ describe("correct", async () => {
       const source = new Source(
         await readFile(filepath, { encoding: "utf-8" }),
       );
-
       const scanner = new Scanner(source, 4);
-      const tokens = [];
-      let token;
-      do {
-        token = scanner.token;
-        tokens.push(token);
-        scanner.advance();
-      } while (token.symbol !== TokenType.EOF);
+      const parser = new Parser(scanner);
+      const program = parser.parseProgram();
 
-      expect(tokens).toMatchSnapshot();
+      expect(program).toMatchSnapshot();
     });
   }
 });

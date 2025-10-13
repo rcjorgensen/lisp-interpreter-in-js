@@ -7,6 +7,8 @@ export const TokenType = {
   lambdaRW: { label: "lambda" },
   beginRW: { label: "begin" },
   condRW: { label: "cond" },
+  trueRW: { label: "true" },
+  falseRW: { label: "false" },
 
   // arithmetic operators
   plus: { label: "+" },
@@ -34,3 +36,27 @@ export const TokenType = {
   EOF: { label: "End-of-File" },
   unknown: { label: "unknown" },
 };
+
+export function isPrimitive(symbol) {
+  return (
+    symbol === TokenType.setRW ||
+    symbol === TokenType.defineRW ||
+    symbol === TokenType.ifRW ||
+    symbol === TokenType.lambdaRW ||
+    symbol === TokenType.beginRW ||
+    symbol === TokenType.condRW ||
+    symbol === TokenType.trueRW ||
+    symbol === TokenType.falseRW ||
+    symbol === TokenType.plus ||
+    symbol === TokenType.minus ||
+    symbol === TokenType.times ||
+    symbol === TokenType.divide ||
+    symbol === TokenType.lessThan ||
+    symbol === TokenType.lessOrEqual ||
+    symbol === TokenType.greaterThan ||
+    symbol === TokenType.greaterOrEqual ||
+    symbol === TokenType.intLiteral ||
+    symbol === TokenType.stringLiteral ||
+    symbol === TokenType.identifier
+  );
+}

@@ -1,0 +1,272 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`correct > correct-01.scm 1`] = `
+[
+  [
+    Token {
+      "position": Position {
+        "charNumber": 2,
+        "lineNumber": 1,
+      },
+      "symbol": {
+        "label": "define",
+      },
+      "text": "",
+    },
+    [
+      Token {
+        "position": Position {
+          "charNumber": 10,
+          "lineNumber": 1,
+        },
+        "symbol": {
+          "label": "Identifier",
+        },
+        "text": "append",
+      },
+      Token {
+        "position": Position {
+          "charNumber": 17,
+          "lineNumber": 1,
+        },
+        "symbol": {
+          "label": "Identifier",
+        },
+        "text": "x",
+      },
+      Token {
+        "position": Position {
+          "charNumber": 19,
+          "lineNumber": 1,
+        },
+        "symbol": {
+          "label": "Identifier",
+        },
+        "text": "y",
+      },
+    ],
+    [
+      Token {
+        "position": Position {
+          "charNumber": 4,
+          "lineNumber": 2,
+        },
+        "symbol": {
+          "label": "if",
+        },
+        "text": "",
+      },
+      [
+        Token {
+          "position": Position {
+            "charNumber": 8,
+            "lineNumber": 2,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "null?",
+        },
+        Token {
+          "position": Position {
+            "charNumber": 14,
+            "lineNumber": 2,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "x",
+        },
+      ],
+      Token {
+        "position": Position {
+          "charNumber": 7,
+          "lineNumber": 3,
+        },
+        "symbol": {
+          "label": "Identifier",
+        },
+        "text": "y",
+      },
+      [
+        Token {
+          "position": Position {
+            "charNumber": 8,
+            "lineNumber": 4,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "cons",
+        },
+        [
+          Token {
+            "position": Position {
+              "charNumber": 14,
+              "lineNumber": 4,
+            },
+            "symbol": {
+              "label": "Identifier",
+            },
+            "text": "car",
+          },
+          Token {
+            "position": Position {
+              "charNumber": 18,
+              "lineNumber": 4,
+            },
+            "symbol": {
+              "label": "Identifier",
+            },
+            "text": "x",
+          },
+        ],
+        [
+          Token {
+            "position": Position {
+              "charNumber": 14,
+              "lineNumber": 5,
+            },
+            "symbol": {
+              "label": "Identifier",
+            },
+            "text": "append",
+          },
+          [
+            Token {
+              "position": Position {
+                "charNumber": 22,
+                "lineNumber": 5,
+              },
+              "symbol": {
+                "label": "Identifier",
+              },
+              "text": "cdr",
+            },
+            Token {
+              "position": Position {
+                "charNumber": 26,
+                "lineNumber": 5,
+              },
+              "symbol": {
+                "label": "Identifier",
+              },
+              "text": "x",
+            },
+          ],
+          Token {
+            "position": Position {
+              "charNumber": 29,
+              "lineNumber": 5,
+            },
+            "symbol": {
+              "label": "Identifier",
+            },
+            "text": "y",
+          },
+        ],
+      ],
+    ],
+  ],
+  [
+    Token {
+      "position": Position {
+        "charNumber": 2,
+        "lineNumber": 7,
+      },
+      "symbol": {
+        "label": "Identifier",
+      },
+      "text": "append",
+    },
+    [
+      Token {
+        "position": Position {
+          "charNumber": 9,
+          "lineNumber": 7,
+        },
+        "symbol": {
+          "label": "quote",
+        },
+        "text": "",
+      },
+      [
+        Token {
+          "position": Position {
+            "charNumber": 11,
+            "lineNumber": 7,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "a",
+        },
+        Token {
+          "position": Position {
+            "charNumber": 13,
+            "lineNumber": 7,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "b",
+        },
+        Token {
+          "position": Position {
+            "charNumber": 15,
+            "lineNumber": 7,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "c",
+        },
+      ],
+    ],
+    [
+      Token {
+        "position": Position {
+          "charNumber": 18,
+          "lineNumber": 7,
+        },
+        "symbol": {
+          "label": "quote",
+        },
+        "text": "",
+      },
+      [
+        Token {
+          "position": Position {
+            "charNumber": 20,
+            "lineNumber": 7,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "d",
+        },
+        Token {
+          "position": Position {
+            "charNumber": 22,
+            "lineNumber": 7,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "e",
+        },
+        Token {
+          "position": Position {
+            "charNumber": 24,
+            "lineNumber": 7,
+          },
+          "symbol": {
+            "label": "Identifier",
+          },
+          "text": "f",
+        },
+      ],
+    ],
+  ],
+]
+`;
