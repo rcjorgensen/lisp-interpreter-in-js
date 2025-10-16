@@ -39,6 +39,7 @@ export const TokenType = {
 
 export function isPrimitive(symbol) {
   return (
+    symbol === TokenType.quoteRW ||
     symbol === TokenType.setRW ||
     symbol === TokenType.defineRW ||
     symbol === TokenType.ifRW ||

@@ -37,7 +37,7 @@ export class Parser {
       return this.#parseQuotedExpression();
     }
 
-    throw Error("Invalid expression.");
+    throw Error(`Invalid expression ${this.#scanner.symbol.label}`);
   }
 
   /**

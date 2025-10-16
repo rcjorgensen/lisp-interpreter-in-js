@@ -7,7 +7,7 @@ export function evaluate(exp, env) {
   } else if (isQuoted(exp)) {
     return getTextOfQuotation(exp);
   } else {
-    throw Error(`Unknown expression type ${exp}`);
+    throw Error(`Unknown expression type ${JSON.stringify(exp)}`);
   }
 }
 
@@ -20,11 +20,11 @@ function isSelfEvaluating(exp) {
 }
 
 function isTaggedList(exp, tag) {
-  return Array.isArray(exp) && exp.length > 0 && exp[0] === tag;
+  return Array.isArray(exp) && exp.length > 0 && exp[0].symbol === tag;
 }
 
 function isQuoted(exp) {
-  return isTaggedList(exp);
+  return isTaggedList(exp, TokenType.quoteRW);
 }
 
 function getTextOfQuotation([_, exp]) {

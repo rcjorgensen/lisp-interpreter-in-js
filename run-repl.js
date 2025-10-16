@@ -16,7 +16,6 @@ async function driverLoop() {
     while (true) {
       const input = await rl.question(`\n\n${inputPrompt}\n`);
 
-      console.log(input);
       if (input === "exit" || input === "quit") {
         break;
       }

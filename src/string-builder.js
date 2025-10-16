@@ -8,10 +8,10 @@ export class StringBuilder {
   }
 
   /**
-   * @param {string} char
+   * @param {number} codePoint
    */
-  append(char) {
-    this.#buffer[this.#length++] = char.codePointAt(0);
+  append(codePoint) {
+    this.#buffer[this.#length++] = codePoint;
   }
 
   clear() {

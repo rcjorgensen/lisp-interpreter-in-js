@@ -5,6 +5,23 @@ import { Token } from "./token.js";
 import { TokenType } from "./token-type.js";
 import { StringBuilder } from "./string-builder.js";
 
+const SPACE = " ".codePointAt(0);
+const TAB = "\t".codePointAt(0);
+const LF = "\n".codePointAt(0);
+const CR = "\r".codePointAt(0);
+const VT = "\v".codePointAt(0);
+const FF = "\f".codePointAt(0);
+const DOUBLE_QUOTE = '"'.codePointAt(0);
+const BACKSLASH = "\\".codePointAt(0);
+const ZERO = "0".codePointAt(0);
+const NINE = "9".codePointAt(0);
+const A_LOWER = "a".codePointAt(0);
+const Z_LOWER = "z".codePointAt(0);
+const A_UPPER = "A".codePointAt(0);
+const Z_UPPER = "Z".codePointAt(0);
+const QUESTION_MARK = "?".codePointAt(0);
+const EXCLAMATION_POINT = "!".codePointAt(0);
+
 export class Scanner {
   #source;
   #tokenBuffer;
@@ -96,7 +113,7 @@ export class Scanner {
       symbol = TokenType.intLiteral;
       text = this.#scanIntegerLiteral();
     } else {
-      switch (this.#source.currentChar) {
+      switch (String.fromCodePoint(this.#source.currentChar)) {
         case "+": {
           symbol = TokenType.plus;
           this.#source.advance();
@@ -123,7 +140,7 @@ export class Scanner {
         }
         case "<": {
           this.#source.advance();
-          if (this.#source.currentChar === "=") {
+          if (this.#source.currentChar === "=".codePointAt(0)) {
             symbol = TokenType.lessOrEqual;
             this.#source.advance();
           } else {
@@ -133,7 +150,7 @@ export class Scanner {
         }
         case ">": {
           this.#source.advance();
-          if (this.#source.currentChar === "=") {
+          if (this.#source.currentChar === "=".codePointAt(0)) {
             symbol = TokenType.greaterOrEqual;
             this.#source.advance();
           } else {
@@ -162,7 +179,9 @@ export class Scanner {
           break;
         }
         default:
-          throw Error(`Invalid character '${this.#source.currentChar}'`);
+          throw Error(
+            `Invalid character '${String.fromCodePoint(this.#source.currentChar)}'`,
+          );
       }
     }
 
@@ -180,7 +199,7 @@ export class Scanner {
 
   #skipComment() {
     while (
-      this.#source.currentChar !== "\n" &&
+      this.#source.currentChar !== LF &&
       this.#source.currentChar !== this.#source.EOF
     ) {
       this.#source.advance();
@@ -221,10 +240,10 @@ export class Scanner {
     this.#scanBuffer.append(c);
     this.#source.advance();
 
-    while (this.#source.currentChar !== '"') {
+    while (this.#source.currentChar !== DOUBLE_QUOTE) {
       c = this.#source.currentChar;
-      if (c === "\\") {
-        this.#scanBuffer.append(this.#scanEscapedChar());
+      if (c === BACKSLASH) {
+        this.#scanBuffer.append(this.#scanEscapedChar().codePointAt(0));
       } else {
         this.#scanBuffer.append(c);
         this.#source.advance();
@@ -237,12 +256,15 @@ export class Scanner {
     return this.#scanBuffer.toString();
   }
 
+  /**
+   * @returns {string}
+   */
   #scanEscapedChar() {
     // Need to save current position for error reporting.
     const backslashPosition = this.#source.charPosition;
 
     this.#source.advance();
-    const c = this.#source.currentChar;
+    const c = String.fromCodePoint(this.#source.currentChar);
 
     this.#source.advance(); // leave source at second character following backslash
 
@@ -279,24 +301,49 @@ export class Scanner {
   }
 }
 
-function isWhitespace(char) {
-  return char.trim() === "";
+/**
+ * @param {number} codePoint
+ */
+function isWhitespace(codePoint) {
+  return (
+    codePoint === SPACE ||
+    codePoint === TAB ||
+    codePoint === LF ||
+    codePoint === CR ||
+    codePoint === VT ||
+    codePoint === FF
+  );
 }
 
-function isLetter(char) {
-  return /[a-z]/i.test(char);
+/**
+ * @param {number} codePoint
+ */
+function isLetter(codePoint) {
+  return (
+    (A_LOWER <= codePoint && codePoint <= Z_LOWER) ||
+    (A_UPPER <= codePoint && codePoint <= Z_UPPER)
+  );
 }
 
-function isDigit(char) {
-  return /\d/.test(char);
+/**
+ * @param {number} codePoint
+ */
+function isDigit(codePoint) {
+  return ZERO <= codePoint && codePoint <= NINE;
 }
 
-function isLetterOrDigit(char) {
-  return isLetter(char) || isDigit(char);
+/**
+ * @param {number} codePoint
+ */
+function isLetterOrDigit(codePoint) {
+  return isLetter(codePoint) || isDigit(codePoint);
 }
 
-function isQuestionMarkOrExclamationPoint(char) {
-  return /[?!]/.test(char);
+/**
+ * @param {number} codePoint
+ */
+function isQuestionMarkOrExclamationPoint(codePoint) {
+  return codePoint === QUESTION_MARK || codePoint === EXCLAMATION_POINT;
 }
 
 /**
