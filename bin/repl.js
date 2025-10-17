@@ -1,13 +1,17 @@
+#!/usr/bin/env node
+
 import * as readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 
-import { Source } from "./src/source.js";
-import { Scanner } from "./src/scanner.js";
-import { Parser } from "./src/parser.js";
-import { evaluate } from "./src/evaluator.js";
+import { Source } from "../src/source.js";
+import { Scanner } from "../src/scanner.js";
+import { Parser } from "../src/parser.js";
+import { evaluate } from "../src/evaluator.js";
 
 const inputPrompt = ";;; M-Eval input:";
 const outputPrompt = ";;; M-Eval value:";
+
+const env = [];
 
 async function driverLoop() {
   const rl = readline.createInterface({ input: stdin, output: stdout });
@@ -26,7 +30,7 @@ async function driverLoop() {
 
       const exp = parser.parseExpression();
 
-      const output = evaluate(exp, []);
+      const output = evaluate(exp, env);
 
       console.log(`\n${outputPrompt}\n`);
       console.log(output);

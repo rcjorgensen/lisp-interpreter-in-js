@@ -1,5 +1,12 @@
 {
+  "name": "lisp-interpreter",
+  "version": "1.0.0",
   "type": "module",
+  "bin": {
+    "parse": "./bin/parse.js",
+    "repl": "./bin/repl.js",
+    "scan": "./bin/scan.js"
+  },
   "scripts": {
     "test": "vitest"
   },
