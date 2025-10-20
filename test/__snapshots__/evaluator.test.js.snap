@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`correct > correct-02.scm 1`] = `
+[
+  Token {
+    "position": Position {
+      "charNumber": 1,
+      "lineNumber": 1,
+    },
+    "symbol": {
+      "label": "Integer Literal",
+    },
+    "text": "5",
+  },
+]
+`;

@@ -1,7 +1,10 @@
 export const TokenType = {
   // reserved words
+  /** @type {{ label: "quote"}} */
   quoteRW: { label: "quote" },
+  /** @type {{ label: "set!"}} */
   setRW: { label: "set!" },
+  /** @type {{ label: "define"}} */
   defineRW: { label: "define" },
   ifRW: { label: "if" },
   lambdaRW: { label: "lambda" },
